@@ -1,0 +1,12 @@
+Results for the extraLargeArray
+insert 2.030031099 s
+append 8.68327 ms
+
+
+Tiny Array      | 0.015738 ms           | 0.017595 ms
+Small Array     | 0.022091 ms           | 0.029560999999999997 ms
+Medium Array    | 0.104977 ms           | 0.277762 ms
+Large Array     | 1.0371679999999999 ms         | 18.456713999999998 ms
+Extra Large Array       | 7.004059 ms           | 1945.543771 ms
+
+Based on the timing results I saw a clear pattern in the scaling of each function depending on the size of the array. As the size of the array increases, both `doublerAppend()` and `doublerInsert()` take longer to execute, which was expected. The `doublerAppend()` function performs better because its execution time increases at a relatively slower rate compared to `doublerInsert()`. Therefore, based on the observed timing results and the scalability analysis, `doublerAppend()` scales better and exhibits a more efficient runtime behavior as the array size increases.
